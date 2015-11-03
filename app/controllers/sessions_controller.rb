@@ -9,13 +9,13 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to root_path, notice: "You're Cheesy!"
       else
-        flah.now.alert = 'Invalid cheesiness - try again!'
+        flash.now.alert = 'Invalid cheesiness - try again!'
         render 'new'
       end
     end
 
     def destroy
-      session[:user_id] = nill
+      session[:user_id] = nil
       redirect_to root_path, notice: 'Not cheesy!'
     end
 

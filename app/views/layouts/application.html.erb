@@ -10,7 +10,7 @@
 
  <p>
   <% if current_user %>
-    Welcome, <%= current_user.name %>
+    <%= link_to "Welcome #{current_user.name}", user_path(current_user) %>
     <%= link_to 'Logout', session_path('dummy'), method: :delete %>
   <% else %>
     <%= link_to 'login', login_path %>
