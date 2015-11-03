@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate, only: [:show, :edit, :update]
+  before_action :authorize, only: [:show, :edit, :update]
 
   def index
     @users = User.all
@@ -8,8 +10,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show
-  end
 
   def create
     @user = User.new(user_params)
@@ -21,11 +21,27 @@ class UsersController < ApplicationController
       end
     end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
+  private
+
     def user_params
       params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
     end
 
-  private
+    #def Authenticate
+      #redirect_to_new_session_path, alert: 'You gotta log in to get cheesy' if current_user.nil?
+    #end
 
     def authorize
       @user = User.find(params[:id])

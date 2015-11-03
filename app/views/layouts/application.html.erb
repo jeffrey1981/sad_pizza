@@ -10,10 +10,12 @@
 
  <p>
   <% if current_user %>
-    <%= link_to "Welcome #{current_user.name}", user_path(current_user) %>
-    <%= link_to 'Logout', session_path('dummy'), method: :delete %>
+    <%= link_to "GET CHEESY #{current_user.name}", user_path(current_user) %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'Logout', session_path('bye'), method: :delete %>
   <% else %>
     <%= link_to 'login', login_path %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
     <%= link_to 'sign up', new_user_path %>
   <% end %>
 </p>
