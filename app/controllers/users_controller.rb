@@ -39,9 +39,9 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
     end
 
-    #def Authenticate
-      #redirect_to_new_session_path, alert: 'You gotta log in to get cheesy' if current_user.nil?
-    #end
+    def Authenticate
+      redirect_to_new_session_path, alert: 'You gotta log in to get cheesy' if current_user.nil?
+    end
 
     def authorize
       @user = User.find(params[:id])

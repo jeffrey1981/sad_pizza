@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
+
   def index
-    render text: "You've reached the index page"
-    # query the post model for all of its posts.
-    # pass all of the posts to the index view for posts.
+    render text: "Post your pizza"
+    @post = Post.all.sort_by {|post| post.created_at}.reverse
   end
 
   def new
@@ -10,14 +10,13 @@ class PostsController < ApplicationController
     # render form a view to create a new posts.
   end
 
-  def create
-    # GET the data/post from the user and save it form the users input.
-
-  end
 
   def show
-    # Render the completed post for view.
+    @post = Post.find(params[:id])
+  end
 
+  def create
+    @post = @user.post.build(post_params)
   end
 
   def edit
@@ -32,6 +31,11 @@ class PostsController < ApplicationController
 
   def destroy
     # Create a delete post option to remove all assets associated with the post.
+
+  end
+
+  def post_params
+    params.require(:image).permit(:)
 
   end
 
