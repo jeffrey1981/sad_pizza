@@ -26,11 +26,17 @@ class PostsController < ApplicationController
   end
 
   def edit
-    # Instatiate an edit funtion using post.edit.
+    @post = Post.find(params[:id])
   end
 
   def update
-    # render the new edit to the post.
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
