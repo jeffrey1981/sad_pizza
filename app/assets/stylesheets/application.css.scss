@@ -19,8 +19,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  background-image: url(sadpizza.png);
+@font-face {
+  font-family: 'piecesnfi';
+  src: font-url('piecesnfi.ttf');
+  src: font-url('piecesnfi.ttf') format('truetype');
 }
 
 *,
@@ -29,10 +31,9 @@ body {
   cursor: url(ranch-2.png), default !important;
 }
 
-@font-face {
-  font-family: 'piecesnfi';
-  src: font-url('piecesnfi.ttf');
-  src: font-url('piecesnfi.ttf') format('truetype');
+body {
+  background-image: url(sadpizza.png);
+  padding-top: 70px;
 }
 
 h1 {
@@ -41,7 +42,26 @@ h1 {
   font-size: 7rem;
   text-align: center;
   color: black;
+}
 
+.navbar {
+  min-height: 2em;
+}
+
+.pizza-pic {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.pizza-feed {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 2em;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  color: white;
+  font-size: 2em;
+  padding-bottom: 20px;
 }
 
 

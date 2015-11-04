@@ -1,8 +1,9 @@
 <h1>You so cheesy!</h1>
 
-<% current_user.posts.sort_by {|post| post.created_at}.reverse.each do |post| %>
-  <p><%= post.story %></p>
-  <%= image_tag post.image %>
-<% end %>
-
+<section class="pizza-feed">
+  <% current_user.posts.sort_by {|post| post.created_at}.reverse.each do |post| %>
+    <p><%= post.story %></p>
+    <%= image_tag post.image, class: "pizza-pic" %>
+  <% end %>
+</section>
 

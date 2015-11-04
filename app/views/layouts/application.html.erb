@@ -9,21 +9,27 @@
 </head>
 <body>
 
- <p>
-  <% if current_user %>
-    <%= link_to "GET SAUCY #{current_user.name}", user_path(current_user) %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'SAY CHEESE', new_post_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'BYE', session_path('bye'), method: :delete %>
-  <% else %>
-    <%= link_to 'lOGIN TO DIP', login_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'SIGN UP TO BE PIZZA', new_user_path %>
-  <% end %>
-</p>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <% if current_user %>
+          <%= link_to "GET SAUCY #{current_user.name}", user_path(current_user) %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'SAY CHEESE', new_post_path %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'BYE', session_path('bye'), method: :delete %>
+        <% else %>
+          <%= link_to 'lOGIN TO DIP', login_path %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'SIGN UP TO BE PIZZA', new_user_path %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
 
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
