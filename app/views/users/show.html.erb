@@ -2,8 +2,10 @@
 
 <section class="pizza-feed">
   <% current_user.posts.sort_by {|post| post.created_at}.reverse.each do |post| %>
-    <p><%= post.story %></p>
-    <%= image_tag post.image, class: "pizza-pic" %>
+    <%= link_to post_path(post) do %>
+      <p><%= post.story %></p>
+      <%= image_tag post.image, class: "pizza-pic" %>
+    <% end %>
   <% end %>
 </section>
 
