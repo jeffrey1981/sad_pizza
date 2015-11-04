@@ -23,6 +23,12 @@ body {
   background-image: url(sadpizza.png);
 }
 
+*,
+html,
+body {
+  cursor: url(ranch-2.png), default !important;
+}
+
 @font-face {
   font-family: 'piecesnfi';
   src: font-url('piecesnfi.ttf');
