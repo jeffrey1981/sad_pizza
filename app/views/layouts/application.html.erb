@@ -13,7 +13,7 @@
   <% if current_user %>
     <%= link_to "GET SAUCY #{current_user.name}", user_path(current_user) %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'SAY CHEESE' "/" %>
+    <%= link_to 'SAY CHEESE', new_post_path %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <%= link_to 'BYE', session_path('bye'), method: :delete %>
   <% else %>

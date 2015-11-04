@@ -7,8 +7,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    # Instatiate a new post with post.new.
-    # render form a view to create a new posts.
+    @post = Post.new
   end
 
   def show
@@ -16,11 +15,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    image = Image.new(image_params)
-    image.user = current_user
-    if image.save
+    @post = Post.new(post_params)
+    @post.user = current_user
+    if @post.save
       flash[:notice] = "you posted a pizza, get saucy"
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       render 'new'
     end
@@ -40,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:image).permit(:image_uri)
+    params.require(:post).permit(:story, :image)
   end
 
 end
