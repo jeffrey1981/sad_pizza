@@ -30,17 +30,14 @@ class UsersController < ApplicationController
   def update
   end
 
-  def destroy
-  end
-
-  private
-
     def user_params
       params.require(:user).permit(:name, :username, :email, :password, :password_confirmation)
     end
 
-    def Authenticate
-      redirect_to_new_session_path, alert: 'You gotta log in to get cheesy' if current_user.nil?
+  private
+
+    def authenticate
+      redirect_to new_session_path, alert: 'You gotta log in to get cheesy' if current_user.nil?
     end
 
     def authorize

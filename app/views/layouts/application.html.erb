@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>SadPizza</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,13 +11,15 @@
 
  <p>
   <% if current_user %>
-    <%= link_to "GET CHEESY #{current_user.name}", user_path(current_user) %>
+    <%= link_to "GET SAUCY #{current_user.name}", user_path(current_user) %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Logout', session_path('bye'), method: :delete %>
+    <%= link_to 'SAY CHEESE' "/" %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'BYE', session_path('bye'), method: :delete %>
   <% else %>
-    <%= link_to 'login', login_path %>
+    <%= link_to 'lOGIN TO DIP', login_path %>
     &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'sign up', new_user_path %>
+    <%= link_to 'SIGN UP TO BE PIZZA', new_user_path %>
   <% end %>
 </p>
 

@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20151103223517) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "image"
-    t.string   "story"
-    t.string   "saucy"
-    t.string   "cheese"
+    t.string   "story" #post description
+    t.string   "saucy" #post comments
+    t.string   "cheese" #like a post
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20151103223517) do
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
-    t.text     "description"
+    t.text     "description" #profile desription
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
