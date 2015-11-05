@@ -1,10 +1,10 @@
-<h1>You so cheesy!</h1>
+<h1>SAD PIZZA</h1>
 
 <section class="pizza-feed">
   <% current_user.posts.sort_by {|post| post.created_at}.reverse.each do |post| %>
     <%= link_to post_path(post) do %>
-      <p><%= post.story %></p>
       <%= image_tag post.image, class: "pizza-pic" %>
+      <p><%= post.story %></p>
     <% end %>
   <% end %>
 </section>

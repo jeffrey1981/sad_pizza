@@ -1,6 +1,8 @@
 
 <section class="pizza-feed">
-  <p><%= @post.story %></p>
   <%= image_tag @post.image, class: "pizza-pic" %>
-  <%= button_to "Eat me!", edit_post_path(@post), method: :get %>
+  <p><%= @post.story %></p>
+  <%= button_to "Eat me", edit_post_path(@post), method: :get %>
+  &nbsp;&nbsp;&nbsp;
+  <%= button_to "Toss me", post_path(@post), method: :delete %>
 </section>

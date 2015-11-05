@@ -28,12 +28,12 @@
 *,
 html,
 body {
-  cursor: url(ranch-2.png), default !important;
+  cursor: url(ranch-22.png), default !important;
 }
 
 body {
   background-image: url(sadpizza.png);
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 h1 {
@@ -41,27 +41,44 @@ h1 {
   font-spacing: .3rem;
   font-size: 7rem;
   text-align: center;
-  color: black;
+  color: gold;
 }
+
+.field {
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+}
+
 
 .navbar {
   min-height: 2em;
 }
 
+.navbar,
+.navbar-default,
+.navbar-fixed-top {
+  text-align: center;
+}
+
 .pizza-pic {
-  max-width: 300px;
+  max-width: 250px;
   max-height: 250px;
+  border-radius: 3px;
 }
 
 .pizza-feed {
   background-color: rgba(100, 100, 100, 0.4);
-  border-radius: 2em;
+  border-radius: 0em;
   text-align: center;
   max-width: 500px;
   margin: 0 auto 40px;
   color: white;
   font-size: 2em;
   padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .pizza-feed a:link,

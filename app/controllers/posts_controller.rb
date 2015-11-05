@@ -40,7 +40,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
+    flash[:notice] = "To the trash can?"
     redirect_to user_path(current_user)
   end
 
