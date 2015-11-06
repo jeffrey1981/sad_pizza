@@ -16,9 +16,9 @@ ________________________________________
 - [x] As a user, I would like to log in and out of my account.
 - [x] As a user, I would like to create a post with an image and description.
 - [x] As a user, I would like to edit a post.
-- [ ] As a user, I would like to delete a post.
+- [x] As a user, I would like to delete a post.
 - [ ] As a user, I would like to 'cheese' on a post.
-- [ ] As a user, I would like to view the entire pizza feed.
+- [x] As a user, I would like to view the entire pizza feed.
 
 ##Icebox
 
@@ -29,6 +29,14 @@ ________________________________________
 - [ ] As a user, I would like to delete my account.
 - [ ] As a user, I would like to email posts to my friends.
 - [ ] As a user, I would like to have profile details.
+
+##Trello board
+
+https://trello.com/b/RpQ8oTKn/sad-pizza
+
+##Sad Pizza
+
+https://sheltered-peak-6328.herokuapp.com/
 
 ________________________________________
 ##Wire frames
