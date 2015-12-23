@@ -1,4 +1,4 @@
-# sad_pizza
+# Sad Pizza, Cheesy on purpose.
 ![] (https://i.imgur.com/7ptYqZK.png)
 
 ###link
@@ -19,6 +19,7 @@ ________________________________________
 - [x] As a user, I would like to delete a post.
 - [ ] As a user, I would like to 'cheese' on a post.
 - [x] As a user, I would like to view the entire pizza feed.
+- [ ] As a user, I would like to only be able to edit my personal posts.
 
 ##Icebox
 
