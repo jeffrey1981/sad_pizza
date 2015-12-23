@@ -1,4 +1,4 @@
-# Sad Pizza Cheesy on purpose.
+# Sad Pizza, Cheesy on purpose.
 ![] (https://i.imgur.com/7ptYqZK.png)
 
 ###link
