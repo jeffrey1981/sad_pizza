@@ -37,7 +37,7 @@ https://trello.com/b/RpQ8oTKn/sad-pizza
 
 ##Sad Pizza
 
-https://sheltered-peak-6328.herokuapp.com/
+https://sadpizza.herokuapp.com/
 
 ________________________________________
 ##Wire frames
